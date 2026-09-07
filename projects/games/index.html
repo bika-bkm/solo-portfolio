@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة تطوير الألعاب | معرض أعمالي</title>
+    <link rel="icon" type="image/png" href="../../assets/favicon.png">
+    <!-- استدعاء ملف الستايل الرئيسي المشترك -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- استدعاء ملف الستايل الخاص بصفحة الألعاب -->
+    <link rel="stylesheet" href="games-style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+
+    <!-- هالة الماوس المتوهجة -->
+    <div id="mouse-aura"></div>
+
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <div class="logo">GAMES PORTAL</div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="#" class="active">الألعاب</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-btn">
+            <span class="icon">🔮</span>
+        </button>
+    </nav>
+
+    <!-- مقدمة البوابة (ثيم سينمائي يناسب الألعاب) -->
+    <header class="portal-header">
+        <div class="container">
+            <h1 class="page-title">مشاريع <span class="highlight-name">تطوير الألعاب</span></h1>
+            <p class="subtitle">ادخل إلى العوالم الافتراضية التي قمت بتصميمها وبرمجتها. ألعاب تفاعلية، ممتعة، ومصممة
+                بشغف المونارك.</p>
+        </div>
+    </header>
+
+    <!-- شبكة عرض الألعاب (Games Grid) -->
+    <main class="projects-container container">
+        <div class="games-grid">
+
+            <!-- اللعبة الأولى -->
+            <div class="game-card">
+                <!-- مساحة مخصصة لعرض GIF للعبة عند تجهيزها لاحقاً -->
+                <div class="game-preview-container">
+                    <div class="game-badge">جديد 🔥</div>
+                    <div class="game-preview-placeholder">
+                        <span>🎮 صورة متحركة للعبة (Gameplay GIF)</span>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>صياد الظلال (Shadow Hunter)</h3>
+                    <p>لعبة أكشن ومنصات ثنائية الأبعاد (2D Platformer) تم برمجتها بالكامل، حيث يواجه اللاعب وحوش
+                        البوابات لرفع مستواه الشخصي.</p>
+                    <div class="game-meta">
+                        <span class="engine-tag">Unity / C#</span>
+                        <span class="platform-tag">🖥️ PC / Web</span>
+                    </div>
+                    <div class="game-actions">
+                        <a href="#" class="game-btn play-btn">إلعب الآن في المتصفح ⚡</a>
+                        <a href="#" class="game-btn download-btn">صفحة التحميل (Itch.io) 📥</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- اللعبة الثانية -->
+            <div class="game-card">
+                <div class="game-preview-container">
+                    <div class="game-preview-placeholder">
+                        <span>🧩 صورة متحركة للعبة (Gameplay GIF)</span>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>متاهة المونارك (Monarch's Maze)</h3>
+                    <p>لعبة ألغاز ذكاء ثلاثية الأبعاد تعتمد على حل الأحاجي البيئية والهروب من الغرف المغلقة قبل انتهاء
+                        الوقت المحدد.</p>
+                    <div class="game-meta">
+                        <span class="engine-tag">Godot / GDScript</span>
+                        <span class="platform-tag">📱 Android / PC</span>
+                    </div>
+                    <div class="game-actions">
+                        <a href="#" class="game-btn play-btn">إلعب الآن في المتصفح ⚡</a>
+                        <a href="#" class="game-btn download-btn">صفحة التحميل (Itch.io) 📥</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ربط ملفات الجافا سكريبت الرئيسية والتحكم بالثيمات -->
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+/* ==========================================================================
+   1. التجهيز العام والثيمات (Variables & Base)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.3s ease;
+    /* تجعل الانتقال بين الثيمات ناعماً وانسيابياً */
+}
+
+/* ثيم سونغ جين وو (الافتراضي الداكن) */
+.dark-theme {
+    --bg-color: #0d0f14;
+    /* أسود داكن يميل للأزرق الغامق */
+    --surface-color: #161a23;
+    /* رمادي غامق للخلفيات الكروت */
+    --text-color: #e2e8f0;
+    /* نص أبيض ثلجي مريح للعين */
+    --accent-color: #8b5cf6;
+    /* أرجواني هالة جنود الظلال */
+    --glow-color: #06b6d4;
+    /* أزرق نيوني متوهج (طاقة المونارك) */
+    --nav-bg: rgba(22, 26, 35, 0.85);
+}
+
+/* ثيم الابنة الملكي (الفاتح) */
+.light-theme {
+    --bg-color: #f8fafc;
+    /* أبيض عاجي ناصع ونظيف */
+    --surface-color: #ffffff;
+    /* خلفية الكروت بيضاء تماماً */
+    --text-color: #0f172a;
+    /* نص أسود داكن ملكي */
+    --accent-color: #d4af37;
+    /* ذهبي ملكي فخم لعناصر الجذب */
+    --glow-color: #fbbf24;
+    /* توهج ذهبي دافئ للمسات الفنية */
+    --nav-bg: rgba(255, 255, 255, 0.85);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. شريط التنقل (Navbar)
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    /* تأثير زجاجي ضبابي خلف القائمة */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--glow-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-color);
+}
+
+.theme-btn {
+    background: none;
+    border: 2px solid var(--accent-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+}
+
+/* ==========================================================================
+   3. قسم البداية القوي (Hero Section)
+   ========================================================================== */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    background: radial-gradient(circle at center, rgba(139, 92, 246, 0.05) 0%, transparent 70%);
+}
+
+/* ==========================================================================
+   8. هالة الماوس المتطورة (Mouse Aura Layer)
+   ========================================================================== */
+#mouse-aura {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, hsla(258, 90%, 66%, 0.479) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    /* تمنع الهالة من حجب الضغطات عن الأزرار */
+    z-index: 9999;
+    /* لجعلها فوق جميع العناصر ما عدا الـ Navbar */
+    transform: translate(-50%, -50%);
+    /* ليكون المركز عند رأس المؤشر تماماً */
+    transition: width 0.3s ease, height 0.3s ease, background 0.3s ease;
+}
+
+/* عندما يتغير الثيم للفاتح، تصبح الهالة ذهبية ناعمة */
+.light-theme #mouse-aura {
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.638) 0%, transparent 70%);
+}
+
+/* تأثير الغضب (Rage Aura) عندما يدخل الماوس منطقة الشغف */
+#mouse-aura.passion-active {
+    width: 100px;
+    /* يتضاعف حجم الهالة */
+    height: 100px;
+    background: radial-gradient(circle, var(--glow-color) 0%, var(--accent-color) 40%, transparent 75%);
+    filter: drop-shadow(0 0 15px var(--glow-color));
+}
+
+/* إخفاء الهالة على الهواتف والأجهزة اللوحية لأنها لا تحتوي على ماوس */
+@media (max-width: 1024px) {
+    #mouse-aura {
+        display: none !important;
+    }
+}
+
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-name {
+    color: var(--accent-color);
+    text-shadow: 0 0 15px var(--glow-color);
+}
+
+.typewriter-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    min-height: 40px;
+    /* تمنع اهتزاز الصفحة أثناء مفعول الكتابة */
+}
+
+.cursor {
+    animation: blink 0.7s infinite;
+    color: var(--glow-color);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px var(--glow-color);
+}
+
+.btn-secondary {
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* ==========================================================================
+   4. قسم البوابات والمحتوى (Portals Grid)
+   ========================================================================== */
+.brief-about {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: var(--surface-color);
+}
+
+.brief-about h2 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.brief-about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.portals-section {
+    padding: 6rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.portals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.portal-card {
+    background-color: var(--surface-color);
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* تأثير التوهج والهالة عند تمرير الماوس (Hover) */
+.portal-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15);
+}
+
+.portal-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.portal-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.portal-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.portal-link {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   5. تذييل الصفحة والأنيميشن (Footer & Animations)
+   ========================================================================== */
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--surface-color);
+    border-top: 1px solid rgba(139, 92, 246, 0.1);
+    font-size: 0.9rem;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ==========================================================================
+   6. اللمسات الإضافية وتأثيرات الهالة (Solo Leveling Auras)
+   ========================================================================== */
+
+/* تأثير النبض التفاعلي لزر الثيمات */
+.theme-btn:hover {
+    box-shadow: 0 0 20px var(--accent-color), 0 0 35px var(--glow-color);
+    transform: scale(1.1) rotate(15deg);
+}
+
+/* هالة النيون لكروت البوابات في الثيم الداكن والفاتح */
+.portal-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* إضافة طبقة وهج خلفية متحركة خلف الكروت */
+.portal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background: linear-gradient(45deg, var(--accent-color), var(--glow-color));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.portal-card:hover::before {
+    opacity: 0.15;
+    /* توهج خفيف ناعم يظهر خلف الكرت عند التمرير */
+    filter: blur(15px);
+}
+
+/* أنيميشن خاص لاسمك ليجعله يتوهج بشكل متقطع وكأنه طاقة حية */
+.highlight-name {
+    animation: aura-pulse 3s infinite alternate;
+}
+
+/* تأثير التوهج المخصص لزر الدخول للبوابات */
+.portal-link {
+    display: inline-block;
+    position: relative;
+    padding: 0.2rem 0;
+}
+
+.portal-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.portal-card:hover .portal-link::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    box-shadow: 0 0 8px var(--glow-color);
+}
+
+@keyframes aura-pulse {
+    0% {
+        text-shadow: 0 0 10px var(--accent-color), 0 0 20px rgba(139, 92, 246, 0.2);
+    }
+
+    100% {
+        text-shadow: 0 0 20px var(--glow-color), 0 0 40px var(--accent-color), 0 0 60px rgba(6, 182, 212, 0.6);
+    }
+}

@@ -1,0 +1,122 @@
+/* تنسيقات إضافية مخصصة لبوابة الأمن السيبراني */
+
+.portal-header {
+    padding: 120px 0 40px 0;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* شبكة الكروت */
+.cyber-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+.cyber-card {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    backdrop-filter: blur(8px);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--glow-color);
+    box-shadow: 0 8px 25px rgba(6, 182, 212, 0.1);
+}
+
+/* شارات الحالة المخصصة للسايبر سيكيورتي */
+.card-status {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+}
+
+.status-secure {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-warning {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.cyber-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.cyber-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.8rem;
+}
+
+.cyber-card p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+    min-height: 80px;
+}
+
+/* التاغات الخاصة بالمهارات السيبرانية */
+.cyber-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.cyber-tags span {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* أزرار الإجراءات */
+.cyber-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem 0;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    border: 1px solid var(--accent-color);
+    color: var(--text-color);
+}
+
+.cyber-btn:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 4px 15px var(--glow-color);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,127 @@
+/* تنسيقات إضافية مخصصة لصفحة عرض المواقع */
+
+.portal-header {
+    padding: 120px 0 40px 0;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* شبكة المشاريع */
+.web-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+.project-card {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.15);
+}
+
+/* مكان صورة المشروع (يمكنك استبدالها بوسم img لاحقاً) */
+.project-image-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, rgba(22, 26, 35, 0.4), rgba(139, 92, 246, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+    color: var(--text-color);
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.project-info {
+    padding: 1.8rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.project-info p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+    min-height: 70px;
+    /* لتناسق أطوال الكروت */
+}
+
+/* تاغات التقنيات المستخدمة */
+.tech-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tags span {
+    background-color: rgba(139, 92, 246, 0.1);
+    color: var(--accent-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* أزرار روابط المشروع */
+.project-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.proj-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.6rem 0;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.live-btn {
+    background-color: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+}
+
+.live-btn:hover {
+    box-shadow: 0 4px 15px var(--glow-color);
+    transform: translateY(-2px);
+}
+
+.git-btn {
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.git-btn:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}

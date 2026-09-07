@@ -1,0 +1,162 @@
+/* تنسيقات إضافية مخصصة لبوابة الألعاب */
+
+.portal-header {
+    padding: 120px 0 40px 0;
+    text-align: center;
+    background: radial-gradient(circle at top, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
+}
+
+.page-title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* شبكة عرض الألعاب */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3.5rem;
+    padding: 3rem 0;
+}
+
+.game-card {
+    background-color: var(--surface-color);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(8px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: var(--glow-color);
+    box-shadow: 0 15px 35px rgba(6, 182, 212, 0.15);
+}
+
+/* حاوية العرض المرئي للعبة */
+.game-preview-container {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.game-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ef4444;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+.game-preview-placeholder {
+    height: 100%;
+    background: linear-gradient(180deg, rgba(22, 26, 35, 0.2), rgba(6, 182, 212, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-weight: bold;
+    opacity: 0.75;
+    transition: transform 0.5s ease;
+}
+
+/* تأثير تقريب الصورة عند تمرير الماوس */
+.game-card:hover .game-preview-placeholder {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+.game-info {
+    padding: 2rem;
+}
+
+.game-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.game-info p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+    min-height: 65px;
+}
+
+/* معلومات المحرك والمنصة */
+.game-meta {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.game-meta span {
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.engine-tag {
+    background-color: rgba(6, 182, 212, 0.1);
+    color: var(--glow-color);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.platform-tag {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* أزرار تفاعلات الألعاب */
+.game-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.game-btn {
+    text-align: center;
+    padding: 0.7rem 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.play-btn {
+    background: linear-gradient(90deg, var(--accent-color), var(--glow-color));
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+}
+
+.play-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--glow-color);
+}
+
+.download-btn {
+    border: 2px dashed var(--accent-color);
+    color: var(--text-color);
+}
+
+.download-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-style: solid;
+}

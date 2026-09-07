@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة الأمن السيبراني | معرض أعمالي</title>
+    <link rel="icon" type="image/png" href="../../assets/favicon.png">
+    <!-- استدعاء ملف الستايل الرئيسي المشترك -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- استدعاء ملف الستايل الخاص بصفحة الأمن السيبراني -->
+    <link rel="stylesheet" href="cyber-style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+
+    <!-- هالة الماوس المتوهجة -->
+    <div id="mouse-aura"></div>
+
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <div class="logo">CYBER PORTAL</div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="#" class="active">الأمن السيبراني</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-btn">
+            <span class="icon">🔮</span>
+        </button>
+    </nav>
+
+    <!-- مقدمة البوابة (بطابع Terminal أو موجه الأوامر المخترق) -->
+    <header class="portal-header">
+        <div class="container">
+            <h1 class="page-title">مختبر <span class="highlight-name">الأمن السيبراني</span></h1>
+            <p class="subtitle">استعراض لأدوات الحماية، اختبارات الاختراق الأخلاقي، وتقارير سد الثغرات الأمنية في
+                الأنظمة والشبكات.</p>
+        </div>
+    </header>
+
+    <!-- شبكة عرض الأعمال السيبرانية (Cyber Grid) -->
+    <main class="projects-container container">
+        <div class="cyber-grid">
+
+            <!-- عمل رقم 1: أداة برمجية أمنية -->
+            <div class="cyber-card">
+                <div class="card-status status-secure">✓ آمن</div>
+                <div class="cyber-icon">🛠️</div>
+                <h3>أداة فحص المنافذ الذكية (Port Scanner)</h3>
+                <p>أداة برمجية بلغة Python لفحص منافذ الشبكة المفتوحة بذكاء وسرعة، مع تحديد الخدمات والبروتوكولات النشطة
+                    وتحليل المخاطر المحتملة.</p>
+                <div class="cyber-tags">
+                    <span>Python</span>
+                    <span>Networking</span>
+                    <span>Automation</span>
+                </div>
+                <a href="#" class="cyber-btn tool-link">عرض الكود على GitHub 📁</a>
+            </div>
+
+            <!-- عمل رقم 2: تقرير ثغرة أو تحدي CTF -->
+            <div class="cyber-card">
+                <div class="card-status status-warning">⚠️ ثغرة مكتشفة</div>
+                <div class="cyber-icon">📝</div>
+                <h3>تقرير ثغرة XSS في منصة تجريبية</h3>
+                <p>تقرير مفصل يشرح كيفية اكتشاف ثغرة من نوع Cross-Site Scripting (XSS) في بيئة معزولة، وطرق استغلالها
+                    الأخلاقي وكيفية ترقيعها بشكل كامل.</p>
+                <div class="cyber-tags">
+                    <span>Web Security</span>
+                    <span>Vulnerability Report</span>
+                    <span>OWASP Top 10</span>
+                </div>
+                <a href="#" class="cyber-btn report-link">قراءة التقرير الكامل (PDF) 📄</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ربط ملفات الجافا سكريبت لتفعيل الثيمات وهالة الماوس -->
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

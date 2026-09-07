@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة برمجة المواقع | معرض أعمالي</title>
+    <link rel="icon" type="image/png" href="../../assets/favicon.png">
+    <!-- استدعاء نفس ملف الستايل الرئيسي باستخدام المسار الصحيح للخروج من المجلد -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- استدعاء ملف ستايل إضافي خاص بصفحة المشاريع سننشئه بعد قليل -->
+    <link rel="stylesheet" href="web-style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+
+<body class="dark-theme"> <!-- يرث خصائص الثيم التلقائي -->
+
+    <!-- هالة الماوس المتوهجة تتبعنا هنا أيضاً -->
+    <div id="mouse-aura"></div>
+
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <div class="logo">WEB PORTAL</div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="#" class="active">المشاريع</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-btn">
+            <span class="icon">🔮</span>
+        </button>
+    </nav>
+
+    <!-- مقدمة البوابة -->
+    <header class="portal-header">
+        <div class="container">
+            <h1 class="page-title">مشاريع <span class="highlight-name">تطوير الويب</span></h1>
+            <p class="subtitle">استكشف المواقع والمنصات الرقمية التي قمت ببنائها وبرمجتها بأعلى معايير الجودة والأمان.
+            </p>
+        </div>
+    </header>
+
+    <!-- شبكة عرض المشاريع (Projects Grid) -->
+    <main class="projects-container container">
+        <div class="web-projects-grid">
+
+            <!-- مشروع رقم 1 -->
+            <div class="project-card">
+                <div class="project-image-placeholder">
+                    <span>💻 لقطة شاشة للموقع هنا</span>
+                </div>
+                <div class="project-info">
+                    <h3>منصة تجارة إلكترونية متكاملة</h3>
+                    <p>موقع تسوق حديث يحتوي على سلة مشتريات تفاعلية، نظام تصفية متطور، ولوحة تحكم لإدارة المنتجات
+                        بالكامل.</p>
+                    <div class="tech-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="proj-btn live-btn">معاينة حية 🚀</a>
+                        <a href="#" class="proj-btn git-btn">كود المشروع 📁</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- مشروع رقم 2 -->
+            <div class="project-card">
+                <div class="project-image-placeholder">
+                    <span>📊 لوحة تحكم البيانات (Dashboard)</span>
+                </div>
+                <div class="project-info">
+                    <h3>لوحة تحكم تفاعلية لإحصاءات الأمان</h3>
+                    <p>موقع يعرض رسوم بيانية تفاعلية لمراقبة الهجمات السيبرانية وحالة السيرفرات بشكل لحظي ومنظم.</p>
+                    <div class="tech-tags">
+                        <span>Charts.js</span>
+                        <span>CSS Variables</span>
+                        <span>JS Core</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="proj-btn live-btn">معاينة حية 🚀</a>
+                        <a href="#" class="proj-btn git-btn">كود المشروع 📁</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ربط ملفات الجافا سكريبت من المجلد الرئيسي -->
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

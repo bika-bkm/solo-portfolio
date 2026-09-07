@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض أعمالي | بوابة المطور</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+
+    <div id="mouse-aura"></div>
+    <nav class="navbar">
+        <div class="logo">PORTFOLIO</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">الرئيسية</a></li>
+            <li><a href="about.html">نبذة عني</a></li>
+            <li><a href="contact.html">اتصل بي</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-btn">
+            <span class="icon">🔮</span> <!-- ستتغير الأيقونة بالـ JS لاحقاً -->
+        </button>
+    </nav>
+
+    <!-- قسم البداية القوي (Hero Section) -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>مرحباً، أنا <span class="highlight-name">عبدالرحمن مصطفى</span></h1>
+            <!-- هنا سيظهر تأثير الكتابة التلقائية بـ JavaScript -->
+            <p class="typewriter-text">أنا <span id="dynamic-text"></span><span class="cursor">|</span></p>
+
+            <div class="hero-buttons">
+                <a href="#portals" class="btn btn-primary">استكشف البوابات</a>
+                <a href="#" class="btn btn-secondary">تحميل السيرة الذاتية CV</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم نبذة سريعة (Brief About) -->
+    <section class="brief-about">
+        <div class="container">
+            <h2>شغفي ورؤيتي</h2>
+            <p>أجمع بين شغف بناء الألعاب وتطوير الويب، مع عين ساهرة على حماية الأنظمة. أؤمن أن البرمجة ليست مجرد كود، بل
+                هي فن حل المشكلات وصناعة تجارب رقمية آمنة وممتعة تنبض بالحياة.</p>
+        </div>
+    </section>
+
+    <!-- قسم بوابات الأقسام الثلاثة (The Three Portals) -->
+    <section id="portals" class="portals-section">
+        <div class="container">
+            <h2 class="section-title">اختر بوابتك (الأقسام)</h2>
+            <div class="portals-grid">
+
+                <!-- بوابة تطوير الألعاب -->
+                <div class="portal-card game-portal">
+                    <div class="portal-icon">🎮</div>
+                    <h3>تطوير الألعاب</h3>
+                    <p>تصميم وبرمجة ألعاب تفاعلية وممتعة تنبض بالحياة داخل المتصفح وخارجه.</p>
+                    <a href="projects/games/index.html" class="portal-link">دخول البوابة ←</a>
+                </div>
+
+                <!-- بوابة برمجة المواقع -->
+                <div class="portal-card web-portal">
+                    <div class="portal-icon">💻</div>
+                    <h3>برمجة المواقع</h3>
+                    <p>بناء مواقع سريعة، متجاوبة، وحديثة باستخدام أحدث تقنيات الويب.</p>
+                    <a href="projects/web-dev/index.html" class="portal-link">دخول البوابة ←</a>
+                </div>
+
+                <!-- بوابة الأمن السيبراني -->
+                <div class="portal-card cyber-portal">
+                    <div class="portal-icon">🛡️</div>
+                    <h3>الأمن السيبراني</h3>
+                    <p>فحص الثغرات، حماية تطبيقات الويب، وتحليل الأنظمة الأمنية لحماية البيانات.</p>
+                    <a href="projects/cyber-security/index.html" class="portal-link">دخول البوابة ←</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة (Footer) -->
+    <footer class="main-footer">
+        <p>حقوق النشر © 2026 - عبدالرحمن مصطفى </p>
+    </footer>
+
+    <!-- ربط ملفات الـ JavaScript التي سننشئها لاحقاً -->
+    <script src="js/main.js"></script>
+    <script src="js/typewriter.js"></script>
+</body>
+
+</html>
